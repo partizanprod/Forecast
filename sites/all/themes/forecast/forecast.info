@@ -1,0 +1,7 @@
+name = Forecast
+description = theme for the partizan forecast
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/fonts.css
