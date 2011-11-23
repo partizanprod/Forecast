@@ -89,7 +89,7 @@
     <?php if ($display_submitted || $user_picture): ?>
       <footer class="submitted">
         <?php print $user_picture; ?>
-        <?php print $submitted; ?>
+        <?php print $date; ?>
       </footer>
     <?php endif; ?>
 

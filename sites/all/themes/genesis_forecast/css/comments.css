@@ -8,8 +8,10 @@
  *                     Comments
  **********************************************************/
 /* Comment wrapper */
-#comment-wrapper {}
-h2#comment-wrapper-title {}
+.comment-wrapper {}
+.comment-wrapper h2 {
+	font-size: 14px;
+}
 	
 .comment {
   margin: 0 0 1em;

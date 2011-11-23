@@ -41,10 +41,24 @@
 .region-sidebar-second .block .content {}
 
 /* Very high specifity selectors to style blocks in one sidebar. */
-#sidebar-first .block {}
+#sidebar-first .block {
+  border-bottom: 1px solid #CCC;
+}
+
 #sidebar-first .block-title {}
-#sidebar-first .block-inner {}
+#sidebar-first .block-inner {
+	padding-bottom: 10px;
+}
+
 #sidebar-first .block .content {}
+#sidebar-first #block-system-main-menu {
+	padding-bottom: 30px;
+}
+
+#sidebar-first #block-system-main-menu ul.menu li.leaf {
+	list-style-image:none;
+	list-style-type:none;
+}
 
 #sidebar-second .block {}
 #sidebar-second .block-title {}
@@ -97,9 +111,17 @@
 .region-tertiary-content .block-inner {}
 .region-tertiary_content .block .content {}
 
-.region-footer .block {}
+.region-footer .block {
+	clear: none;
+	float: left;
+	width: 33%;
+}
+
 .region-footer .block-title {}
-.region-footer .block-inner {}
+.region-footer .block-inner {
+	margin: 0 auto;
+	width: 30%;
+}
 .region-footer .block .content {}
 
 
@@ -132,6 +154,12 @@
 #block-user-new                    {} /* Who's New block         */
 #block-user-online                 {} /* Who's Online block      */
 
+#block-system-main-menu .active-trail {
+	font-size:14px;
+	font-weight:bold;
+}
+	
+	
 /* Primary and Secondary links blocks */
 #block-menu-main-menu-links   {}
 #block-menu-secondary-links {}

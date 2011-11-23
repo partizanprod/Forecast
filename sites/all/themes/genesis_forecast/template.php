@@ -34,20 +34,19 @@ function genesis_SUBTHEME_process_html(&$vars) {
 /**
  * Override or insert variables into the page templates.
  */
-/* -- Delete this line if you want to use these functions
-function genesis_SUBTHEME_preprocess_page(&$vars) {
-}
-function genesis_SUBTHEME_process_page(&$vars) {
+function genesis_forecast_process_page(&$vars) {
+	if (!empty($vars['node']) && $vars['node']->type == 'film') {
+	  $vars['title'] = '';
+	}
 }
 // */
 
 /**
  * Override or insert variables into the node templates.
  */
-/* -- Delete this line if you want to use these functions
-function genesis_SUBTHEME_preprocess_node(&$vars) {
-}
-function genesis_SUBTHEME_process_node(&$vars) {
+
+function genesis_forecast_preprocess_node(&$vars) {
+	$vars["date"]= "submitted on " . format_date($vars["created"]);
 }
 // */
 
@@ -70,3 +69,10 @@ function genesis_SUBTHEME_preprocess_block(&$vars) {
 function genesis_SUBTHEME_process_block(&$vars) {
 }
 // */
+
+function genesis_forecast_form_alter(&$form, &$form_state, $form_id) {
+	if ($form_id == 'mailchimp_lists_user_subscribe_form_1') {
+		unset($form['mailchimp_lists']['mailchimp_1']['mergevars']['FNAME']);
+		unset($form['mailchimp_lists']['mailchimp_1']['mergevars']['LNAME']);
+	}
+}

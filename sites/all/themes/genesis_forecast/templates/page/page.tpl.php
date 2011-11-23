@@ -83,10 +83,6 @@
      <?php if ($linked_site_logo || $site_name || $site_slogan): ?>
       <div id="branding">
 
-         <?php if ($linked_site_logo): ?>
-          <div id="logo"><?php print $linked_site_logo; ?></div>
-        <?php endif; ?>
-
         <?php if ($site_name || $site_slogan): ?>
           <hgroup<?php if (!$site_slogan && $hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>>
             <?php if ($site_name): ?>
@@ -155,7 +151,12 @@
     </div>
 
     <?php if ($sidebar_first = render($page['sidebar_first'])): ?>
-      <div id="sidebar-first" class="sidebar"><?php print $sidebar_first; ?></div>
+      <div id="sidebar-first" class="sidebar">
+      
+      <?php if ($linked_site_logo): ?>
+          <div id="logo"><?php print $linked_site_logo; ?></div>
+      <?php endif; ?>
+      <?php print $sidebar_first; ?></div>
     <?php endif; ?>
 
     <?php if ($sidebar_second = render($page['sidebar_second'])): ?>
@@ -171,7 +172,7 @@
   <?php endif; ?>
 
   <?php if ($page_footer = render($page['footer'])): ?>
-    <footer id="footer" role="contentinfo">
+    <footer id="footer" class="clearfix" role="contentinfo">
       <?php print $page_footer; ?>
     </footer>
   <?php endif; ?>

@@ -4,8 +4,9 @@
  **********************************************************/
 
 body {
-  padding: 0 10px;
-  margin: 0;
+  background-color: #EEE;
+  margin: auto;
+  padding: 100; 
 }
 	
 /**********************************************************
@@ -25,23 +26,33 @@ body {
  * Fluid layouts use percentages, e.g. 85%
  * Fixed widths use pixels,       e.g. 960px
  */
-#container {
-  width: 85%;
-  min-width: 960px;
-}
+#container {}
 
 /* Column wrappers */
-#columns {}
+#columns {
+  margin: 0 auto;
+  width: 990px;
+ }
+ 
 .columns-inner {}
 
 /* Content wrappers */
 #content-column {}
-.content-inner {}
+.content-inner {
+	padding: 64px;
+	width: 750px;
+}
 
 /* Main content wrappers*/
 #main-content {}
 #content {}
 
+/* Standard 3 column, px based widths (default). */
+#genesis-1c .two-sidebars .content-inner{margin:0 260px;}
+#genesis-1c .sidebar-first .content-inner{margin-left:220px;}
+#genesis-1c .sidebar-second .content-inner{margin-right:260px;}
+#genesis-1c #sidebar-first{width:200px;margin-left:-100%;}
+#genesis-1c #sidebar-second{width:220px;margin-left:-240px;}
 
 /**********************************************************
  *                 Header Elements
@@ -130,8 +141,15 @@ hgroup {}
 .sidebar .region {}
 
 /* Target a specific sidebar. */
-#sidebar-first {}
-.sidebar .region-sidebar-first {}
+#sidebar-first {
+	background-color: #FFF;
+	font-family: ITCAvantGardeGothicProXLt;
+	font-size: 14px;
+    padding: 20px 10px 20px 10px;
+}
+.sidebar .region-sidebar-first {
+	padding-top: 20px;
+}
 
 #sidebar-second {}
 .sidebar .region-sidebar-second {}
@@ -180,10 +198,14 @@ ol.search-results .search-info {}
  *                Footer, RSS Feed Icon
  **********************************************************/
 #footer {
+  background-color: #FFF;
   margin: 0.375em 0;
 }
 
-#footer .region {}
+#footer .region {
+	margin: auto;
+	width: 990px;
+}
 
 .feed-icon {}
 .feed-icon img {

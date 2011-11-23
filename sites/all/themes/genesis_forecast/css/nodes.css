@@ -78,5 +78,12 @@
  * Replace CONTENT_TYPE with the content type 
  * machine-readable name. 
  */
-.node-type-CONTENT_TYPE {}
+.node-type-film .meta {
+	font-family: ITCAvantGardeGothicProXLt;
+	font-size: 16px;
+}
+
+.node-type-film .meta .title {
+	font-style: italic;
+}
 
